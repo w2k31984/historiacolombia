@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20 de Julio - Grito de Independencia</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background: #007BFF;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        header .btn {
+            background: #fff;
+            color: #007BFF;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            display: inline-block;
+        }
+
+        header .btn:hover {
+            background: #0056b3;
+            color: white;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        main section {
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        main section img {
+            max-width: 100%;
+            height: auto;
+            width: 300px;
+            height: 150px;
+            border-radius: 5px;
+        }
+
+        footer {
+            text-align: center;
+            background: #333;
+            color: white;
+            padding: 1rem 0;
+            margin-top: 20px;
+        }
+
+        #backToTop {
+            background: #007BFF;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            cursor: pointer;
+        }
+
+        #backToTop:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>20 de Julio - Grito de Independencia</h1>
+        <a href="inicio.html" class="btn">Regresar a Inicio</a>
+    </header>
+    <main>
+        <section>
+            <h2>Antecedentes</h2>
+            <p>Colombia estaba bajo el dominio del Imperio español...</p>
+            <img src="imgs/20_1.jpg" alt="Antecedentes históricos">
+        </section>
+        <section>
+            <h2>Por qué se celebra</h2>
+            <p>El 20 de julio de 1810 marca el inicio simbólico del proceso de independencia...</p>
+            <img src="imgs/20_2.jpg" alt="Celebración del 20 de julio">
+        </section>
+        <section>
+            <h2>Hechos destacados</h2>
+            <p>El incidente del florero fue un detonante importante...</p>
+            <img src="imgs/20_3.jpg" alt="Hechos destacados">
+        </section>
+        <section>
+            <h2>Personajes destacados</h2>
+            <p>Antonio Nariño, Camilo Torres Tenorio, y José María Carbonell...</p>
+            <img src="imgs/7_2.jpg" alt="Personajes destacados">
+        </section>
+        <section>
+            <h2>Mujeres destacadas</h2>
+            <p>Policarpa Salavarrieta y Manuela Beltrán tuvieron roles cruciales...</p>
+        </section>
+        <button id="backToTop">Volver Arriba</button>
+    </main>
+    <footer>
+        <p>© 2024 </p>
+    </footer>
+    <script>
+        document.getElementById('backToTop').addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+
+</html>

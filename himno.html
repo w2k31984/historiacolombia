@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Himno Nacional de Colombia</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background: #007BFF;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        .btn {
+            background: #fff;
+            color: #007BFF;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            background: #0056b3;
+            color: white;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        main section {
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        main section img {
+            max-width: 100%;
+            height: auto;
+            width: 300px;
+            height: 150px;
+            border-radius: 5px;
+        }
+
+        footer {
+            text-align: center;
+            background: #333;
+            color: white;
+            padding: 1rem 0;
+            margin-top: 20px;
+        }
+
+        #backToTop {
+            background: #007BFF;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            cursor: pointer;
+        }
+
+        #backToTop:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Himno Nacional de Colombia</h1>
+        <a href="inicio.html" class="btn">Regresar a Inicio</a>
+    </header>
+    <main>
+        <section>
+            <h2>Origen</h2>
+            <p>El Himno Nacional de Colombia fue compuesto como parte de una obra teatral en 1850. En 1887 se convirtió
+                en himno oficial.</p>
+            <img src="imgs/himno_1.png" alt="Origen del Himno Nacional">
+        </section>
+        <section>
+            <h2>Significado de las primeras estrofas y el coro</h2>
+            <p>El coro del himno representa la esperanza de un futuro prometedor y la superación de los sufrimientos de
+                la lucha por la independencia.</p>
+            <img src="imgs/20_1.jpg" alt="Significado de las estrofas del Himno Nacional">
+        </section>
+        <section>
+            <h2>Himno Antioqueño</h2>
+            <p>El Himno Antioqueño celebra la libertad y el orgullo por la geografía de Antioquia. Su letra fue escrita
+                por Epifanio Mejía en 1868.</p>
+            <img src="imgs/7_1.jpg" alt="Himno Antioqueño">
+        </section>
+        <section>
+            <h2>Escudo de Colombia</h2>
+            <p>El Escudo de Colombia, creado en 1834, simboliza la libertad, la victoria y la riqueza natural del país.
+            </p>
+            <img src="imgs/integrante_2.png" alt="Escudo de Colombia">
+        </section>
+        <section>
+            <h2>Bandera de Colombia</h2>
+            <p>La bandera de Colombia, adoptada en 1861, simboliza la riqueza (amarillo), los mares (azul) y la sangre
+                de los libertadores (rojo).</p>
+            <img src="imgs/biblio_1.jpg" alt="Bandera de Colombia">
+        </section>
+        <button id="backToTop">Volver Arriba</button>
+    </main>
+    <footer>
+        <p>© 2024</p>
+    </footer>
+    <script>
+        document.getElementById('backToTop').addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+
+</html>

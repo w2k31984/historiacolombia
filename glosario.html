@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glosario Histórico</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --text-color: #333;
+            --background-color: #f5f6fa;
+            --orange-color: #ff7b00;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            position: relative;
+        }
+
+        .home-button {
+            background-color: var(--orange-color);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 15px;
+            transition: background-color 0.3s ease;
+        }
+
+        .home-button:hover {
+            background-color: #ff9100;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Carousel Styles */
+        .carousel {
+            width: 350px;
+            height: 250px;
+            margin: 20px auto;
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .carousel-inner {
+            display: flex;
+            transition: transform 0.5s ease;
+            height: 100%;
+        }
+
+        .carousel-item {
+            min-width: 100%;
+            height: 100%;
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .carousel-controls {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .carousel-control {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s;
+            z-index: 2;
+        }
+
+        .carousel-control:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .carousel-dots {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 8px;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .dot.active {
+            background-color: white;
+        }
+
+        .glossary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .glossary-item {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+
+        .glossary-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .glossary-item h3 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 5px;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s;
+        }
+
+        .back-to-top:hover {
+            background-color: var(--primary-color);
+        }
+
+        @media (max-width: 768px) {
+            .carousel {
+                width: 100%;
+                max-width: 350px;
+            }
+
+            .glossary-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .container {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Glosario Histórico</h1>
+        <p>Términos importantes de la historia de Colombia</p>
+        <a href="inicio.html" class="home-button">REGRESAR A INICIO</a>
+    </header>
+
+    <div class="container">
+        <div class="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item">
+                    <img src="imgs/glosario_1.jpg" alt="Imagen histórica 1" />
+                </div>
+                <div class="carousel-item">
+                    <img src="imgs/glosario_2.jpg" alt="Imagen histórica 2" />
+                </div>
+                <div class="carousel-item">
+                    <img src="imgs/biblio_1.jpg" alt="Imagen histórica 3" />
+                </div>
+            </div>
+            <div class="carousel-controls">
+                <button class="carousel-control" onclick="moveSlide(-1)">❮</button>
+                <button class="carousel-control" onclick="moveSlide(1)">❯</button>
+            </div>
+            <div class="carousel-dots">
+                <span class="dot active" onclick="currentSlide(0)"></span>
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+            </div>
+        </div>
+
+        <div class="glossary-grid">
+            <div class="glossary-item">
+                <h3>1. Acta de Independencia</h3>
+                <p>Documento que declara la emancipación de un territorio.</p>
+            </div>
+
+            <div class="glossary-item">
+                <h3>2. Campaña Libertadora</h3>
+                <p>Estrategia militar liderada por Bolívar para liberar la Nueva Granada.</p>
+            </div>
+
+            <div class="glossary-item">
+                <h3>3. Criollos</h3>
+                <p>Descendientes de europeos nacidos en América, marginados en el poder.</p>
+            </div>
+
+            <div class="glossary-item">
+                <h3>4. Florero de Llorente</h3>
+                <p>Incidente que inició el levantamiento del 20 de julio de 1810.</p>
+            </div>
+
+            <div class="glossary-item">
+                <h3>5. Gran Colombia</h3>
+                <p>Unión de Colombia, Venezuela, Ecuador y Panamá tras la independencia.</p>
+            </div>
+
+            <div class="glossary-item">
+                <h3>6. Ilustración</h3>
+                <p>Movimiento que promovió ideas de libertad e igualdad en el siglo XVIII.</p>
+            </div>
+
+            <div class="glossary-item">
+                <h3>7. Junta Suprema</h3>
+                <p>Gobierno provisional creado por criollos tras el Grito de Independencia.</p>
+            </div>
+
+            <div class="glossary-item">
+                <h3>8. Manuela Sáenz</h3>
+                <p>Activista clave, conocida como "la Libertadora del Libertador".</p>
+            </div>
+
+            <div class="glossary-item">
+                <h3>9. Nueva Granada</h3>
+                <p>Nombre del virreinato que incluía Colombia y otros países actuales.</p>
+            </div>
+
+            <div class="glossary-item">
+                <h3>10. Policarpa Salavarrieta</h3>
+                <p>Heroína patriota que trabajó como espía y mensajera.</p>
+            </div>
+
+            <div class="glossary-item">
+                <h3>11. Simón Bolívar</h3>
+                <p>Líder que encabezó la liberación de varias naciones sudamericanas.</p>
+            </div>
+
+            <div class="glossary-item">
+                <h3>12. Virrey</h3>
+                <p>Representante del rey español en las colonias.</p>
+            </div>
+
+            <div class="glossary-item">
+                <h3>13. Efemérides</h3>
+                <p>Fecha memorable que se celebra por su relevancia histórica.</p>
+            </div>
+
+            <div class="glossary-item">
+                <h3>14. Invasión Napoleónica</h3>
+                <p>Ocupación de España por Napoleón, que debilitó su control colonial.</p>
+            </div>
+
+            <div class="glossary-item">
+                <h3>15. Dominio español</h3>
+                <p>Control político y económico de España sobre sus colonias.</p>
+            </div>
+        </div>
+    </div>
+
+    <a href="#" class="back-to-top">Volver arriba</a>
+
+    <script>
+        let currentSlideIndex = 0;
+        const slides = document.querySelectorAll('.carousel-item');
+        const dots = document.querySelectorAll('.dot');
+
+        function moveSlide(direction) {
+            currentSlideIndex = (currentSlideIndex + direction + slides.length) % slides.length;
+            updateCarousel();
+        }
+
+        function currentSlide(index) {
+            currentSlideIndex = index;
+            updateCarousel();
+        }
+
+        function updateCarousel() {
+            const carousel = document.querySelector('.carousel-inner');
+            carousel.style.transform = `translateX(-${currentSlideIndex * 100}%)`;
+
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSlideIndex);
+            });
+        }
+
+        // Auto advance slides
+        setInterval(() => moveSlide(1), 5000);
+    </script>
+</body>
+
+</html>

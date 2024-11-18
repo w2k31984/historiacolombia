@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bibliografía - Historia de Colombia</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100">
+    <nav class="bg-red-700 text-white shadow-lg">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <h1 class="text-2xl font-bold">Bibliografía del Proyecto</h1>
+                <a href="inicio.html"
+                    class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded transition-colors">
+                    Regresar a Inicio
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mx-auto px-4 py-8">
+        <!-- Carrusel de imágenes -->
+        <div class="max-w-4xl mx-auto mb-12 relative">
+            <div class="overflow-hidden rounded-lg shadow-xl">
+                <div id="carousel" class="flex transition-transform duration-500">
+                    <div class="min-w-full">
+                        <img src="imgs/biblio_1.jpg" alt="Imagen 1" class="w-full h-auto">
+                    </div>
+                    <div class="min-w-full">
+                        <img src="imgs/biblio_2.jpg" alt="Imagen 2" class="w-full h-auto">
+                    </div>
+                    <div class="min-w-full">
+                        <img src="imgs/biblio_3.jpg" alt="Imagen 3" class="w-full h-auto">
+                    </div>
+                </div>
+
+                <!-- Botones de navegación -->
+                <button onclick="moveSlide(-1)"
+                    class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-4 hover:bg-opacity-75 transition-opacity">
+                    &#10094;
+                </button>
+                <button onclick="moveSlide(1)"
+                    class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-4 hover:bg-opacity-75 transition-opacity">
+                    &#10095;
+                </button>
+
+                <!-- Indicadores -->
+                <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                    <button onclick="goToSlide(0)"
+                        class="w-3 h-3 rounded-full bg-white opacity-50 hover:opacity-100 transition-opacity"></button>
+                    <button onclick="goToSlide(1)"
+                        class="w-3 h-3 rounded-full bg-white opacity-50 hover:opacity-100 transition-opacity"></button>
+                    <button onclick="goToSlide(2)"
+                        class="w-3 h-3 rounded-full bg-white opacity-50 hover:opacity-100 transition-opacity"></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Referencias Bibliográficas -->
+        <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-8">
+            <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">BIBLIOGRAFÍA</h2>
+
+            <div class="space-y-4">
+                <!-- Lista de referencias -->
+                <div class="hover:bg-blue-50 p-4 rounded-lg transition-colors">
+                    <a href="https://www.academia.edu/102976935/David_Bushnell_Ensayos_de_Historia_pol%C3%ADtica_de_Colombia_siglos_XIX_y_XX"
+                        target="_blank" class="text-blue-600 hover:text-blue-800 transition-colors">
+                        David Bushnell: Ensayos de Historia política de Colombia siglos XIX y XX
+                    </a>
+                </div>
+
+                <div class="hover:bg-blue-50 p-4 rounded-lg transition-colors">
+                    <a href="http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S2145-132X2011000100007"
+                        target="_blank" class="text-blue-600 hover:text-blue-800 transition-colors">
+                        Artículo Scielo - Historia Política de Colombia
+                    </a>
+                </div>
+
+                <div class="hover:bg-blue-50 p-4 rounded-lg transition-colors">
+                    <a href="https://editorial.uniagustiniana.edu.co/index.php/editorial/catalog/book/59"
+                        target="_blank" class="text-blue-600 hover:text-blue-800 transition-colors">
+                        Editorial Uniagustiniana - Catálogo histórico
+                    </a>
+                </div>
+
+                <div class="hover:bg-blue-50 p-4 rounded-lg transition-colors">
+                    <a href="https://archive.org/details/historiadelarevo00rest" target="_blank"
+                        class="text-blue-600 hover:text-blue-800 transition-colors">
+                        Historia de la Revolución - Archive.org
+                    </a>
+                </div>
+
+                <div class="hover:bg-blue-50 p-4 rounded-lg transition-colors">
+                    <a href="https://dialnet.unirioja.es/servlet/tesis?codigo=142807" target="_blank"
+                        class="text-blue-600 hover:text-blue-800 transition-colors">
+                        Tesis Dialnet - Historia de Colombia
+                    </a>
+                </div>
+
+                <div class="hover:bg-blue-50 p-4 rounded-lg transition-colors">
+                    <a href="https://librosaccesoabierto.uptc.edu.co/index.php/editorial-uptc/catalog/download/131/160/2634?inline=1"
+                        target="_blank" class="text-blue-600 hover:text-blue-800 transition-colors">
+                        UPTC - Libros de Acceso Abierto
+                    </a>
+                </div>
+
+                <div class="hover:bg-blue-50 p-4 rounded-lg transition-colors">
+                    <a href="https://www.todacolombia.com/historia-de-colombia/independencia-de-colombia.html"
+                        target="_blank" class="text-blue-600 hover:text-blue-800 transition-colors">
+                        Historia de la Independencia de Colombia
+                    </a>
+                </div>
+
+                <div class="hover:bg-blue-50 p-4 rounded-lg transition-colors">
+                    <a href="https://www.himnonacionaldecolombia.com/letra/" target="_blank"
+                        class="text-blue-600 hover:text-blue-800 transition-colors">
+                        Himno Nacional de Colombia - Letra oficial
+                    </a>
+                </div>
+
+                <div class="hover:bg-blue-50 p-4 rounded-lg transition-colors">
+                    <a href="https://www.culturagenial.com/es/himno-de-colombia/" target="_blank"
+                        class="text-blue-600 hover:text-blue-800 transition-colors">
+                        Cultura Genial - Himno de Colombia
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Botón de volver a inicio -->
+        <div class="flex justify-center mt-12">
+            <a href="inicio.html"
+                class="bg-red-700 hover:bg-red-800 text-white px-8 py-3 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300 flex items-center space-x-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd"
+                        d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z"
+                        clip-rule="evenodd" />
+                </svg>
+                <span>Volver a Inicio</span>
+            </a>
+        </div>
+    </main>
+
+    <footer class="bg-blue-700 text-white mt-8">
+        <div class="container mx-auto px-4 py-6">
+            <div class="text-center">
+                <p>&copy; 2024</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        let currentSlide = 0;
+        const totalSlides = 3;
+        const carousel = document.getElementById('carousel');
+
+        function moveSlide(direction) {
+            currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+            updateCarousel();
+        }
+
+        function goToSlide(slideIndex) {
+            currentSlide = slideIndex;
+            updateCarousel();
+        }
+
+        function updateCarousel() {
+            carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+            updateIndicators();
+        }
+
+        function updateIndicators() {
+            const indicators = document.querySelectorAll('.bottom-4 button');
+            indicators.forEach((indicator, index) => {
+                indicator.style.opacity = index === currentSlide ? '1' : '0.5';
+            });
+        }
+
+        // Auto-advance slides
+        setInterval(() => moveSlide(1), 5000);
+
+        // Initial indicator update
+        updateIndicators();
+    </script>
+    <a href="#" class="back-to-top">Volver arriba</a>
+</body>
+
+</html>
